@@ -26,10 +26,10 @@ namespace guess_the_number {
                     return;
                 } else if (guess > correct_num) {
                     Console.WriteLine("Nope, its less than that");
-                    Console.WriteLine("You have {0} guesses left!", 7 - i); // show how many guesses are left
+                    Console.WriteLine("You have {0} guesses left!", i); // show how many guesses are left
                 } else if (guess < correct_num) {
                     Console.WriteLine("Nope, its greater than that");
-                    Console.WriteLine("You have {0} guesses left!", 7 - i);
+                    Console.WriteLine("You have {0} guesses left!", i);
                 }
             }
 
