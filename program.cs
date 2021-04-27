@@ -17,19 +17,19 @@ namespace guess_the_number {
                 int guess = int.Parse(input); // convert user input to int
                 log.Add(guess); // add guess to log
 
-                if (guess > correct_num) {
-                    Console.WriteLine("Nope, its less than that");
-                    Console.WriteLine("You have {0} guesses left!", 7 - i); // show how many guesses are left
-                } else if (guess < correct_num) {
-                    Console.WriteLine("Nope, its greater than that");
-                    Console.WriteLine("You have {0} guesses left!", 7 - i);
-                } else if (guess == correct_num) {
+                if (guess == correct_num) {
                     Console.WriteLine("Damn. You win!");
                     Console.WriteLine("The number was indeed {0}", correct_num); // display correct number
                     Console.WriteLine("You guessed in {0} guesses", (i + 1)); // show how many guesses it took the user to get
                     Console.WriteLine("Your guess log:");
                     print_log(log); // print log
                     return;
+                } else if (guess > correct_num) {
+                    Console.WriteLine("Nope, its less than that");
+                    Console.WriteLine("You have {0} guesses left!", 7 - i); // show how many guesses are left
+                } else if (guess < correct_num) {
+                    Console.WriteLine("Nope, its greater than that");
+                    Console.WriteLine("You have {0} guesses left!", 7 - i);
                 }
             }
 
